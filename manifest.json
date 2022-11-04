@@ -1,0 +1,19 @@
+{
+  "name": "NoInterruptions",
+  "description": "Mute Tab during Spotify Ads",
+  "version": "1.0",
+  "manifest_version": 3,
+  "author": "Mohit",
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://open.spotify.com/*"],
+      "js": ["noInterruptions.js"]
+    }
+  ]
+}
